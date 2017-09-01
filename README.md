@@ -10,6 +10,7 @@ Wanting to migrate from AdonisJs v3 to v4, I found that recreating the old blog 
 * https://adonisjs.com (v3)
 * https://adonisjs.com/docs/3.2/adonis-blog-part1 (v3 original blog tutorial)
 * https://dev.adonisjs.com (v4)
+* http://dev.adonisjs.com/docs/4.0/upgrade-guide (v3 to v4 changes in detail)
 * https://github.com/adonisjs/adonis-framework
 
 ### Setup
