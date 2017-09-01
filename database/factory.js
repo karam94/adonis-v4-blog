@@ -11,7 +11,7 @@
 |
 */
 
-const Factory = use('Factory')
+const Factory = use('Factory');
 
 /**
   Factory.blueprint('App/Models/User', (faker) => {
@@ -25,5 +25,5 @@ Factory.blueprint('App/Models/Post', (faker) => {
   return {
     title: faker.sentence(),
     content: faker.paragraph()
-  }
+  };
 })

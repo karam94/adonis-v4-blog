@@ -1,16 +1,16 @@
-'use strict'
+'use strict';
 
-const Post = use('App/Models/Post')
-const { validate } = use('Validator')
+const Post = use('App/Models/Post');
+const { validate } = use('Validator');
 
 class PostController {
   async index ({ request, response, view }) {
-    const posts = await Post.all()
-    return view.render('home', { posts: posts.toJSON() })
+    const posts = await Post.all();
+    return view.render('home', { posts: posts.toJSON() });
   }
 
   async create ({ request, response, view }) {
-    return view.render('posts.create')
+    return view.render('posts.create');
   }
 
   async store ({ request, response, view, session }) {
@@ -18,15 +18,15 @@ class PostController {
     const rules = {
       title: 'required',
       content: 'required'
-    }
-    const validation = await validate(request.all(), rules)
+    };
+    const validation = await validate(request.all(), rules);
 
     if (validation.fails()) {
       session
               .withErrors(validation.messages())
-              .flashExcept(['password'])
+              .flashExcept(['password']);
 
-      return response.redirect('back')
+      return response.redirect('back');
     }
 
     await Post.create(postData);
@@ -39,4 +39,4 @@ class PostController {
   }
 }
 
-module.exports = PostController
+module.exports = PostController;

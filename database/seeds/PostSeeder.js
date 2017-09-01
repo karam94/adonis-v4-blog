@@ -17,7 +17,7 @@ class PostSeeder {
     const postsArray = await Factory
       .model('App/Models/Post')
       .createMany(5)
-    }
+    };
 }
 
 module.exports = PostSeeder

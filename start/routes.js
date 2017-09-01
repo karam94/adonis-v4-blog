@@ -13,13 +13,12 @@
 |
 */
 
-const Route = use('Route')
+const Route = use('Route');
 
-Route.get('/', 'PostController.index')
-Route.on('/about').render('about')
-Route.on('/contact').render('contact')
+Route.get('/', 'PostController.index');
+Route.on('/about').render('about');
+Route.on('/contact').render('contact');
 
-Route.get('posts/create', 'PostController.create')
-Route.post('posts', 'PostController.store')
-
-Route.get('posts/:id', 'PostController.show')
+Route.get('posts/create', 'PostController.create');
+Route.post('posts', 'PostController.store');
+Route.get('posts/:id', 'PostController.show');
